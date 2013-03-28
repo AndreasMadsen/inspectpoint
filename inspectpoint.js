@@ -15,7 +15,7 @@ module.exports = Inspectpoint;
 util.inherits(Inspectpoint, stream.Transform);
 
 Inspectpoint.prototype._transform = function (object, encodeing, done) {
-  this.push(new Buffer(util.inspect(object, this._options)));
+  this.push(new Buffer(util.inspect(object, this._options) + '\n'));
 
   done(null);
 };

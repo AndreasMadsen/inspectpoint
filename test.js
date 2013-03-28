@@ -15,7 +15,7 @@ test('no options', function (t) {
       inspect.write(deep);
       inspect.end();
   
-  t.equal(inspect.read().toString(), '{ a: { b: { c: [Object] } } }');
+  t.equal(inspect.read().toString(), '{ a: { b: { c: [Object] } } }\n');
   t.end();
 });
 
@@ -24,6 +24,6 @@ test('set options', function (t) {
       inspect.write(deep);
       inspect.end();
   
-  t.equal(inspect.read().toString(), '{ a: { b: { c: [ 1 ] } } }');
+  t.equal(inspect.read().toString(), '{ a: { b: { c: [ 1 ] } } }\n');
   t.end();
 });
